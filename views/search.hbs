@@ -1,0 +1,33 @@
+{{#if hasContent}}
+
+    {{#each headline_array}}
+        <div>
+            <h2>{{this.title}}</h2>
+        
+        
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src={{this.images}} alt="" width="500" class="rounded ">
+        </div>
+        <div>
+            <h5>{{this.summary}}</h5>
+        </div>
+
+        <div class="d-flex justify-content-between">
+        
+            <h6>{{this.date }}</h6>   
+            <a href="{{ this.url_link }}">Read</a>
+            
+        
+        </div>
+
+        <hr>
+    
+    {{/each}}
+
+{{else}}
+
+        <h2>Your search returns no result</h2>
+	
+{{/if}}
